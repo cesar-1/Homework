@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Membership Form - Boxing Gym</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0; /* Gray background */
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+    form {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff; /* White background */
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+    input[type="submit"] {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Membership Form</h1>
+  </header>
+  <form id="membershipForm" name="membershipForm">
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="phone">Phone:</label>
+    <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Format: 123-456-7890" required>
+
+    <label for="membershipType">Membership Type:</label>
+    <select id="membershipType" name="membershipType" required>
+      <option value="">Select Membership Type</option>
+      <option value="regular">Regular Membership ($120)</option>
+      <option value="trainer">Membership with Trainer ($210)</option>
+    </select>
+
+    <label for="classType">Class Type:</label>
+    <select id="classType" name="classType" required>
+      <option value="">Select Class Type</option>
+      <option value="private">Private Boxing Class</option>
+      <option value="group">Group Boxing Class</option>
+    </select>
+
+    <label for="payment">Payment Method:</label>
+    <fieldset id="payment">
+      <label><input type="radio" name="credit" value="visa" required> Visa</label>
+      <label><input type="radio" name="credit" value="mastercard"> Mastercard</label>
+      <label><input type="radio" name="credit" value="amex"> American Express</label>
+    </fieldset>
+
+    <label for="cardName">Name on Card:</label>
+    <input type="text" id="cardName" name="cardName" required>
+
+    <label for="cardNumber">Card Number:</label>
+    <input type="text" id="cardNumber" name="cardNumber" pattern="[0-9]{16}" required>
+
+    <label for="expMonth">Expiration Month:</label>
+    <select id="expMonth" name="expMonth" required>
+      <option value="">Select Month</option>
+      <option value="01">January</option>
+      <option value="02">February</option>
+      <option value="03">March</option>
+      <option value="04">April</option>
+      <option value="05">May</option>
+      <option value="06">June</option>
+      <option value="07">July</option>
+      <option value="08">August</option>
+      <option value="09">September</option>
+      <option value="10">October</option>
+      <option value="11">November</option>
+      <option value="12">December</option>
+    </select>
+
+    <label for="expYear">Expiration Year:</label>
+    <select id="expYear" name="expYear" required>
+      <option value="">Select Year</option>
+      <option value="2023">2023</option>
+      <option value="2024">2024</option>
+      <option value="2025">2025</option>
+      <option value="2026">2026</option>
+      <option value="2027">2027</option>
+      <option value="2028">2028</option>
+      <option value="2029">2029</option>
+    </select>
+
+    <label for="cvc">CVC:</label>
+    <input type="text" id="cvc" name="cvc" required>
+
+    <input type="submit" id="submitBtn" value="Submit">
+  </form>
+
+  <script>
+    // JavaScript code here
+  </script>
+</body>
+</html>
